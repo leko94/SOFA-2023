@@ -158,7 +158,6 @@ def send_message(n_clicks, message_content):
             return "Please enter a message before sending."
     return ""
 
+# Run the Dash app
 if __name__ == '__main__':
-    app.run_server(debug=True)
-
-pip install dash-bootstrap-components
+    app.run_server(debug=False, port=8050)  # debug=False for production
