@@ -101,7 +101,7 @@ chat_box = html.Div([
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("SOFA 2024", style={'text-align': 'left', 'font-size': '3em'}), width=9),
-        dbc.Col(html.Img(src="assets/Logo1.png", style={'width': '100px', 'height': 'auto'}), width=3),
+        dbc.Col(html.Img(src="assets/Logo1.png", style={'width': '100%', 'height': '50%'}), width=3),
     ], className="mt-4 mb-4"),
     dbc.Row([
         dbc.Col([
@@ -119,7 +119,7 @@ app.layout = dbc.Container([
 )
 def display_tab1_image(selected_value):
     if selected_value:
-        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '100%', 'height': 'auto'})
+        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '50%', 'height': '50%'})
     return ""
 
 @app.callback(
@@ -128,7 +128,7 @@ def display_tab1_image(selected_value):
 )
 def display_tab2_image(selected_value):
     if selected_value:
-        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '100%', 'height': 'auto'})
+        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '50%', 'height': '50%'})
     return ""
 
 @app.callback(
@@ -137,7 +137,7 @@ def display_tab2_image(selected_value):
 )
 def display_tab3_image(selected_value):
     if selected_value:
-        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '100%', 'height': 'auto'})
+        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '50%', 'height': '50%'})
     return ""
 
 # Callback for the chat box
