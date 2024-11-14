@@ -137,7 +137,7 @@ def display_tab2_image(selected_value):
 )
 def display_tab3_image(selected_value):
     if selected_value:
-        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '100%', 'height': 'auto'})
+        return html.Img(src=f"/assets/logo1.png", style={'width': '100%', 'height': 'auto'})
     return ""
 
 # Callback for the chat box
