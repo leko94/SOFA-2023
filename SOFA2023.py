@@ -6,14 +6,11 @@ import smtplib
 from email.message import EmailMessage
 
 # Initialize the Dash app
-app = dash.Dash(__name__, suppress_callback_exceptions=True, assets_folder='assets')
+app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.BOOTSTRAP], assets_folder='assets')
 server = app.server  # Expose the server for WSGI
 
 # Enable logging
 logging.basicConfig(level=logging.DEBUG)
-
-# Initialize the app with Bootstrap styling for a professional look
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # Function to send email
 def send_email(message_content):
@@ -21,7 +18,7 @@ def send_email(message_content):
     msg.set_content(message_content)
     msg['Subject'] = "New Message from SOFA 2023 Dashboard"
     msg['From'] = "your_email@example.com"  # Replace with your email
-    msg['To'] = "Ngcobo.Nkululeko@yahoo.com"
+    msg['To'] = "Ngcobo.Nkululeko@yahoo.com"  # Replace with recipient email
 
     # Send the email
     try:
