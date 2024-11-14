@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.DEBUG)
 def send_email(message_content):
     msg = EmailMessage()
     msg.set_content(message_content)
-    msg['Subject'] = "New Message from SOFA 2023 Dashboard"
+    msg['Subject'] = "New Message from SOFA 2024 Dashboard"
     msg['From'] = "your_email@example.com"  # Replace with your email
     msg['To'] = "Ngcobo.Nkululeko@yahoo.com"  # Replace with recipient email
 
@@ -100,7 +100,7 @@ chat_box = html.Div([
 # Main layout
 app.layout = dbc.Container([
     dbc.Row([
-        dbc.Col(html.H1("SOFA 2023", style={'text-align': 'left', 'font-size': '3em'}), width=9),
+        dbc.Col(html.H1("SOFA 2024", style={'text-align': 'left', 'font-size': '3em'}), width=9),
         dbc.Col(html.Img(src="assets/logo1.png", style={'width': '100px', 'height': 'auto'}), width=3),
     ], className="mt-4 mb-4"),
     dbc.Row([
