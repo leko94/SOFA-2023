@@ -17,8 +17,8 @@ def send_email(message_content):
     msg = EmailMessage()
     msg.set_content(message_content)
     msg['Subject'] = "New Message from SOFA 2024 Dashboard"
-    msg['From'] = "your_email@example.com"  # Replace with your email
-    msg['To'] = "Ngcobo.Nkululeko@yahoo.com"  # Replace with recipient email
+    msg['From'] = "ngcobo.nkululeko@yahoo.com"  # Replace with your email
+    msg['To'] = "213524994@stu.ukzn.ac.za"  # Replace with recipient email
 
     # Send the email
     try:
@@ -101,7 +101,7 @@ chat_box = html.Div([
 app.layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1("SOFA 2024", style={'text-align': 'left', 'font-size': '3em'}), width=9),
-        dbc.Col(html.Img(src="assets/logo1.png", style={'width': '100px', 'height': 'auto'}), width=3),
+        dbc.Col(html.Img(src="assets/Logo1.png", style={'width': '100px', 'height': 'auto'}), width=3),
     ], className="mt-4 mb-4"),
     dbc.Row([
         dbc.Col([
@@ -137,7 +137,7 @@ def display_tab2_image(selected_value):
 )
 def display_tab3_image(selected_value):
     if selected_value:
-        return html.Img(src=f"/assets/logo1.png", style={'width': '100%', 'height': 'auto'})
+        return html.Img(src=f"/assets/{selected_value}.png", style={'width': '100%', 'height': 'auto'})
     return ""
 
 # Callback for the chat box
